@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="buttons">
+      <button (click)="working()" class="working-button">Working</button>
+      <button (click)="dead()" class="dead-button">Dead</button>
+    </div>
+    <div *ngIf="message" class="message">
+      {{ message }}
+    </div>
+  </div>
