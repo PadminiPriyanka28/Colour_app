@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/PadminiPriyanka28/Colour_app.git'
+                git branch: 'main', url: 'https://github.com/PadminiPriyanka28/Colour_app.git'
+
             }
         }
         stage('Install Dependencies') {
