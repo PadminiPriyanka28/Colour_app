@@ -16,6 +16,6 @@ export class StatusComponent {
   }
 
   dead(): void {
-    this.message = 'No, I am dead!';
+    this.message = 'No, am not working!';
   }
 }
