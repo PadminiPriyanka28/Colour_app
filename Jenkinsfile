@@ -3,6 +3,7 @@ pipeline {
     environment {
         // Define NodeJS version (ensure you have NodeJS set up in Jenkins)
         NODE_HOME = tool name: 'nodejs', type: 'NodeJS'
+
     }
     stages {
         stage('Checkout') {
