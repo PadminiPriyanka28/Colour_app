@@ -13,24 +13,24 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    // Use the full path to npm to install dependencies
-                    bat "\"${NODE_HOME}\\node.exe\" \"${NODE_HOME}\\npm\" install"
+                    // Use npm directly from the system PATH, no need for full path to node and npm
+                    bat 'npm install'
                 }
             }
         }
         stage('Build') {
             steps {
                 script {
-                    // Use the full path to ng to build the Angular project
-                    bat "\"${NODE_HOME}\\node.exe\" \"${NODE_HOME}\\npm\" run ng build --prod"
+                    // Use npm to build the Angular project
+                    bat 'npm run ng build --prod'
                 }
             }
         }
         stage('Test') {
             steps {
                 script {
-                    // Run tests with the full path to ng
-                    bat "\"${NODE_HOME}\\node.exe\" \"${NODE_HOME}\\npm\" run ng test --watch=false --browsers=ChromeHeadless"
+                    // Run tests with npm
+                    bat 'npm run ng test --watch=false --browsers=ChromeHeadless'
                 }
             }
         }
