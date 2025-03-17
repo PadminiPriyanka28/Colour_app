@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         // Set NODE_HOME to the path of your Node.js installation
-        NODE_HOME = 'C:\\Users\\Butt\\OneDrive - Conestoga College\\S3-Code Coverage Quality Control\\node js'
+        NODE_HOME = 'C:\Program Files\nodejs'
     }
     stages {
         stage('Checkout') {
