@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Use the full path to npm to install dependencies
-                    sh '${NODE_HOME}\\node.exe ${NODE_HOME}\\npm install'
+                    bat '${NODE_HOME}\\node.exe ${NODE_HOME}\\npm install'
                 }
             }
         }
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
                     // Use the full path to ng to build the Angular project
-                    sh '${NODE_HOME}\\node.exe ${NODE_HOME}\\ng build --prod'
+                    bat '${NODE_HOME}\\node.exe ${NODE_HOME}\\ng build --prod'
                 }
             }
         }
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 script {
                     // Run tests with the full path to ng
-                    sh '${NODE_HOME}\\node.exe ${NODE_HOME}\\ng test --watch=false --browsers=ChromeHeadless'
+                    bat '${NODE_HOME}\\node.exe ${NODE_HOME}\\ng test --watch=false --browsers=ChromeHeadless'
                 }
             }
         }
